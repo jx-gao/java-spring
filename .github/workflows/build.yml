@@ -7,6 +7,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Set up docker
-        uses: docker/setup-docker@v2
+        uses: docker/setup-buildx-action@v3
       - name: Docker build
         run: docker build -t java-spring:latest initial/
