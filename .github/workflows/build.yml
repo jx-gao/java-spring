@@ -1,0 +1,12 @@
+name: build
+on: [push]
+jobs:
+  docker-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up docker
+        uses: docker/setup-docker@v2
+      - name: Docker build
+        uses: docker build -t java-spring:latest initial/
