@@ -9,4 +9,4 @@ jobs:
       - name: Set up docker
         uses: docker/setup-docker@v2
       - name: Docker build
-        uses: docker build -t java-spring:latest initial/
+        run: docker build -t java-spring:latest initial/
